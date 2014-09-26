@@ -1,6 +1,7 @@
 #1/usr/bin/python
 
-import time;
+import time
+
 
 ticks = time.time()
 print "Number of ticks since 12:00am, January 1, 1970: ", ticks;
@@ -11,4 +12,9 @@ print "Local current time: ", localtime;
 localtime2 = time.asctime(time.localtime(time.time()))
 print "Formatted time: ", localtime2;
 
+import calendar
 
+cal = calendar.month(2008, 1)
+
+print "Here is the calendar for: "
+print cal;
