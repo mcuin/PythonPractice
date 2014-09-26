@@ -16,3 +16,5 @@ print "dict[School]: ", dict['School'];
 del dict['Name'];
 dict.clear();
 del dict;
+
+
