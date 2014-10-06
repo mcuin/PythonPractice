@@ -1,4 +1,5 @@
 #!/usr/bin/python
+import os
 
 str = raw_input("Enter your input: ");
 print "Recieved input is: ", str
@@ -14,12 +15,20 @@ print "Softspace flag: ", fo.softspace
 
 fo.write("Python is a great languages.\nYeah it's great!\n");
 
-str = fo.read(10);
+fo.close()
+
+fo2 = open("foo.txt", "r+")
+str = fo2.read(10);
 print "Read string is: ", str
 
-position = fo.tell();
+position = fo2.tell();
 print "Current position is: ", position
 
-fo.close()
+fo2.close()
+
+os.rename("foo.txt", "foo2.txt")
+os.remove("foo2.txt")
+
+os.mkdir("test")
 
  
